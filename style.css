@@ -9,20 +9,66 @@
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(#e4efff,#ffffff);
+    background: #F5F9FF;
 }
 #box-1{
     width: 650px;
     height: 504px;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000017;
+
+    &>h1{
+        font-size: 40px;
+        color: #11175E;
+        text-align: left;
+        position:relative;
+        left: -140px;
+        top: -10px;
+    }
 
     & > #box-2{
         display: flex;
         justify-content: center;
         width: 90%;
         height: 50px;
-        background-color: aqua;
+        background-color: rgb(255, 255, 255);
+        gap: 15px;
 
+        & > #input-1{
+            width: 43.3%;
+            border-radius: 4px;
+            padding: 0 5px;
+            box-shadow: 0 0 5px #0000007a;
+            outline: none;
+}
+
+        & > #input-2{
+            width: 43.3%;
+            border-radius: 4px;
+            padding: 0 5px;
+            box-shadow: 0 0 5px #0000007a;
+            outline: none;
+}
+
+        & > #adicionar{
+            width: 7.6%;
+            border-radius: 4px;
+            font-size:25px;
+            cursor: pointer;
+            background: #2D70FD;
+            color: white;
+            transition:  200ms;
+}
+
+        & > #adicionar:hover{
+            background: #294890;
+        }
     }
 
     & > #box-3{
