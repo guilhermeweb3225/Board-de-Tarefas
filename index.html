@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListaDeTarefas</title><link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ListaDeTarefas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section id="box-1">
-        <h1  id="board">Board de tarefas</h1>
+      <h1 id="board">Board de tarefas</h1>
 
-        <div id="box-2">
-            <input type="text" name="Tarefas" id="input-1"placeholder="Nome de Tarefa">
-            <input type="text" name="Etiqueta" id="input-2"placeholder="Etiqueta">
-            <button onclick="adicionar()"id="adicionar">+</button>
-        </div>
-        <div id="box-3">
-            <div class="dv-exterior">
-                <div class="dv-interior">
-                    <p>Implementar protótipo da listagem de tarefas</p>
-                    <div class="dt-et">
-                        <p class="etiqueta">Etiqueta</p>
-                        <p class="data">Criado em:</p>
-                    </div>
-                </div>
-                <button class="concluir">Concluir</button>
+      <div id="box-2">
+        <input
+          type="text"
+          name="Tarefas"
+          id="input-1"
+          placeholder="Nome de Tarefa"
+        />
+        <input
+          type="text"
+          name="Etiqueta"
+          id="input-2"
+          placeholder="Etiqueta"
+        />
+        <button id="adicionar">+</button>
+      </div>
+      <div id="box-3">
+        <div class="dv-exterior">
+          <div class="dv-interior">
+            <p class="tarefa">Implementar protótipo da listagem de tarefas</p>
+            <div class="dt-et">
+              <p class="etiqueta">Etiqueta</p>
+              <p class="data">Criado em:</p>
             </div>
+          </div>
+          <button class="concluir">Concluir</button>
+        </div>
 
-            <div class="dv-exterior">
-                <div class="dv-interior">
-                    <p>Criar endpoint para cadastro de tarefas</p>
-                    <div class="dt-et">
-                        <p class="etiqueta">Etiqueta</p>
-                        <p class="data">Criado em:</p>
-                    </div>
-                </div>
-                <button class="concluir">Concluir</button>
+        <div class="dv-exterior">
+          <div class="dv-interior">
+            <p class="tarefa">Criar endpoint para cadastro de tarefas</p>
+            <div class="dt-et">
+              <p class="etiqueta">Etiqueta</p>
+              <p class="data">Criado em:</p>
             </div>
+          </div>
+          <button class="concluir">Concluir</button>
+        </div>
 
-            <div class="dv-exterior">
-                <div class="dv-interior">
-                    <p>Implementar tela de listagem de tarefas</p>
-                    <div class="dt-et">
-                        <p class="etiqueta">Etiqueta</p>
-                        <p class="data">Criado em:</p>
-                    </div>
-                </div>
-                <button class="concluir">Concluir</button>
+        <div class="dv-exterior">
+          <div class="dv-interior">
+            <p class="tarefa">Implementar tela de listagem de tarefas</p>
+            <div class="dt-et">
+              <p class="etiqueta">Etiqueta</p>
+              <p class="data">Criado em:</p>
             </div>
+          </div>
+          <button class="concluir">Concluir</button>
         </div>
-        <div id="box-4">
-            <div>
-                <p id="TC">Tarefas:</p>
-                <p id="contador">0</p>
-            </div>
+      </div>
+      <div id="box-4">
+        <div>
+          <p id="TC">Tarefas:</p>
+          <p id="contador">0</p>
         </div>
+      </div>
     </section>
-<script src="script.js"></script>
-</body>
+    <script src="script.js">console.log('olaolaololaolaolaolaolaola')</script>
+  </body>
 </html>

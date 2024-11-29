@@ -47,6 +47,9 @@ body{
                 outline: none;
                 color: #B1BACB;
     }
+            & > #input-1::placeholder{
+                color: #B1BACB;
+            }
 
             & > #input-2{
                 width: 43.3%;
@@ -55,6 +58,9 @@ body{
                 border: 1px solid #EEEEEE;
                 outline: none;
                 color: #B1BACB;
+    }
+    & > #input-2::placeholder{
+        color: #B1BACB;
     }
 
             & > #adicionar{
@@ -101,13 +107,17 @@ body{
                 & > .dv-interior{
                     display: flex;
                     align-items: flex-start;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     flex-direction: column;
                     gap: 20px;
                     width: 393px;
                     height: 55px;
                     padding-left: 10px;
                     background: #ffffff;
+
+                    & > .tarefa{
+                        color: #B1BACB;
+                    }
 
 
                     & > .dt-et{
