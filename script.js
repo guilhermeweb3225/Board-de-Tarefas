@@ -4,6 +4,8 @@ let box3=document.getElementById('box-3')
 let adicionar=document.getElementById('adicionar')
 let totalTarefas=0
 let contador=document.getElementById('contador')
+let totalTarefasConcluidas=0
+let TConcluidas=document.getElementById('concluidasTarefas')
 adicionar.addEventListener('click',()=>{
     if(input1.value===''||input2.value===''){
         alert('Por favor, preencha todos os campos.')
@@ -32,14 +34,32 @@ adicionar.addEventListener('click',()=>{
     let conclua=document.createElement('button')
         conclua.classList.add('concluir')
         conclua.textContent='Concluir'
+        conclua.addEventListener('click',()=>{
+            paragrafo.style.textDecoration='line-through'
+            paragrafo.style.color="#56ff67"
+            conclua.textContent='Concluido'
+            conclua.style.background="#00ff37"
+            totalTarefas--
+            contador.innerText=totalTarefas.toString()
+            totalTarefasConcluidas++
+            TConcluidas.innerText=totalTarefasConcluidas.toString()
+        })
+    let remover=document.createElement('button')
+    remover.classList.add('remover')
+    remover.textContent="x"
+    remover.addEventListener('click',()=>{
+        box3.removeChild(dvExterior)
+        totalTarefas--
+        contador.innerText=totalTarefas.toString()
+    })
 
         box3.appendChild(dvExterior)
         dvExterior.appendChild(dvInterior)
         dvExterior.appendChild(conclua)
+        dvExterior.appendChild(remover)
         dvInterior.appendChild(paragrafo)
         dvInterior.appendChild(dvDataEtiqueta)
         dvDataEtiqueta.appendChild(etiqueta)
-        etiqueta.textContent=''
 
         dvDataEtiqueta.appendChild(data)
 
