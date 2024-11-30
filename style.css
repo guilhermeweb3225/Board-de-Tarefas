@@ -131,12 +131,14 @@ body{
                     flex-direction: column;
                     gap: 20px;
                     width: 393px;
-                    height: 55px;
+                    height: auto;
                     padding-left: 10px;
                     background: #ffffff;
 
                     & > .tarefa{
                         color: #000000;
+                        width: 100%;
+                        word-wrap: break-word;
                     }
 
 
@@ -255,8 +257,18 @@ body{
 
         & > .dv-exterior{
             width: 100%;
-            height: auto;
+            height: 300px;
             flex-direction: column;
+
+            & > .concluir{
+                margin: 10px 0 0 0;
+            }
+
+            & > .remover{
+                position: relative;
+                left: -80px;
+                top: -45px;
+            }
 
             & > .dv-interior{
                 align-items: center;
@@ -266,7 +278,6 @@ body{
                 gap: 10px;
 
                 & > .dt-et{
-                    margin-top: 10px;
                     width: 100%;
                     align-items: start;
                     flex-direction: column;
