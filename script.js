@@ -7,6 +7,7 @@ let contador = document.getElementById('contador');
 let totalTarefasConcluidas = 0;
 let TConcluidas = document.getElementById('concluidasTarefas');
 
+
 // Função para carregar atividades do localStorage
 const carregarAtividades = () => {
     const atividadesSalvas = localStorage.getItem('atividades');
@@ -26,11 +27,12 @@ window.addEventListener('load', () => {
         adicionarEventos(); // Adiciona os eventos aos elementos carregados
     }
 });
-
+let Deta=new Date()
 adicionar.addEventListener('click', () => {
     if (input1.value === '' || input2.value === '') {
         alert('Por favor, preencha todos os campos.');
     } else {
+
         let dvExterior = document.createElement('div');
         dvExterior.classList.add('dv-exterior');
 
@@ -50,7 +52,7 @@ adicionar.addEventListener('click', () => {
 
         let data = document.createElement('p');
         data.classList.add('data');
-        data.textContent = 'Criado em:';
+        data.textContent = 'Criado em:' + Deta.toLocaleDateString('pt-BR');
 
         let conclua = document.createElement('button');
         conclua.classList.add('concluir');

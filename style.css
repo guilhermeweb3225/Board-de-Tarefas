@@ -136,7 +136,7 @@ body{
                     background: #ffffff;
 
                     & > .tarefa{
-                        color: #B1BACB;
+                        color: #000000;
                     }
 
 
@@ -218,4 +218,63 @@ body{
             }
         }
     }
+}
+
+@media screen and (max-width:700px){
+    #box-1{
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+        gap: 10px;
+
+        & > h1{
+            font-size: 30px;
+            left: 0;
+            top: 0;
+        }
+
+        & > #box-2{
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            height: auto;
+
+            & > #input-1,#input-2{
+                width: 100%;
+                height: 50px;
+            }
+
+            & > #adicionar{
+                width: 100%;
+            }
+    }
+
+    & > #box-3{
+        width: 100%;
+        margin-top: 10px;
+
+        & > .dv-exterior{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+
+            & > .dv-interior{
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+                gap: 10px;
+
+                & > .dt-et{
+                    margin-top: 10px;
+                    width: 100%;
+                    align-items: start;
+                    flex-direction: column;
+                    background-color: rgba(255, 0, 0, 0);
+
+                }
+}
+    }
+}
+}
 }
