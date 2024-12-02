@@ -7,7 +7,6 @@ let contador = document.getElementById('contador');
 let totalTarefasConcluidas = 0;
 let TConcluidas = document.getElementById('concluidasTarefas');
 
-
 // Função para carregar atividades do localStorage
 const carregarAtividades = () => {
     const atividadesSalvas = localStorage.getItem('atividades');
@@ -26,8 +25,18 @@ window.addEventListener('load', () => {
         box3.innerHTML = atividadesSalvas;
         adicionarEventos(); // Adiciona os eventos aos elementos carregados
     }
+
+    // Carregar os valores de contagem
+    totalTarefas = localStorage.getItem('totalTarefas') ? parseInt(localStorage.getItem('totalTarefas')) : 0;
+    totalTarefasConcluidas = localStorage.getItem('totalTarefasConcluidas') ? parseInt(localStorage.getItem('totalTarefasConcluidas')) : 0;
+
+    // Atualizar os valores na interface
+    contador.innerText = totalTarefas;
+    TConcluidas.innerText = totalTarefasConcluidas;
 });
-let Deta=new Date()
+
+let Deta = new Date();
+
 adicionar.addEventListener('click', () => {
     if (input1.value === '' || input2.value === '') {
         alert('Por favor, preencha todos os campos.');
@@ -64,6 +73,7 @@ adicionar.addEventListener('click', () => {
             conclua.style.background = "#00ff37";
             totalTarefasConcluidas++;
             TConcluidas.innerText = totalTarefasConcluidas.toString();
+            localStorage.setItem('totalTarefasConcluidas', totalTarefasConcluidas); // Salvar o total de tarefas concluídas
             salvarAtividades();
         });
 
@@ -74,6 +84,7 @@ adicionar.addEventListener('click', () => {
             box3.removeChild(dvExterior);
             totalTarefas--;
             contador.innerText = totalTarefas.toString();
+            localStorage.setItem('totalTarefas', totalTarefas); // Atualizar o total de tarefas
             salvarAtividades();
         });
 
@@ -88,6 +99,7 @@ adicionar.addEventListener('click', () => {
 
         totalTarefas++;
         contador.innerText = totalTarefas.toString();
+        localStorage.setItem('totalTarefas', totalTarefas); // Salvar o total de tarefas
 
         input1.value = '';
         input2.value = '';
@@ -109,6 +121,8 @@ const adicionarEventos = () => {
             contador.innerText = totalTarefas;
             totalTarefasConcluidas++;
             TConcluidas.innerText = totalTarefasConcluidas;
+            localStorage.setItem('totalTarefas', totalTarefas); // Atualizar o total de tarefas
+            localStorage.setItem('totalTarefasConcluidas', totalTarefasConcluidas); // Atualizar o total de tarefas concluídas
             salvarAtividades();
         });
     });
@@ -119,6 +133,7 @@ const adicionarEventos = () => {
             box3.removeChild(dvExterior);
             totalTarefas--;
             contador.innerText = totalTarefas;
+            localStorage.setItem('totalTarefas', totalTarefas); // Atualizar o total de tarefas
             salvarAtividades();
         });
     });

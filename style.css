@@ -84,7 +84,7 @@ body{
 
         & > #box-3{
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             width: 90%;
@@ -92,6 +92,8 @@ body{
             margin-top: 15px;
             background-color: #ffffff;
             gap: 5px;
+            overflow-y: auto;
+            z-index: 1;
 
             & > .dv-exterior{
                 display: flex;
