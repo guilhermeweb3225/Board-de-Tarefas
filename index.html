@@ -13,10 +13,12 @@
     />
   </head>
   <body>
-    <section id="box-1">
-      <h1 id="board">Board de tarefas</h1>
+    <main id="box-1">
+      <header>
+        <h1 id="board">Board de tarefas</h1>
+      </header>
 
-      <div id="box-2">
+      <section id="box-2">
         <input
           type="text"
           name="Tarefas"
@@ -29,19 +31,24 @@
           id="input-2"
           placeholder="Etiqueta"
         />
-        <button id="adicionar">+</button>
-      </div>
-      <div id="box-3">
-      </div>
-      <div id="box-4">
+
+        <button id="adicionar" aria-label="Adicionar tarefa">+</button>
+      </section>
+
+      <section id="box-3">
+        <!-- As tarefas serão adicionadas aqui -->
+      </section>
+
+      <footer id="box-4">
         <div>
           <p id="TC">Tarefas:</p>
           <p id="contador">0</p>
           <p id="TT">Tarefas concluídas:</p>
           <p id="concluidasTarefas">0</p>
         </div>
-      </div>
-    </section>
-    <script src="script.js">console.log('olaolaololaolaolaolaolaola')</script>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

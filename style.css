@@ -6,11 +6,13 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+
 body{
     display: flex;
     justify-content: center;
     background: #F5F9FF;
 }
+
 #box-1{
     display: flex;
     align-items: center;
@@ -22,155 +24,155 @@ body{
     box-shadow: 0 0 10px #00000017;
     border-radius: 10px;
     background-color: #ffffff;
-            & > h1{
-            font-size: 40px;
-            color: #11175E;
-            text-align: left;
-            position:relative;
-            left: -140px;
-            top: -10px;
+
+    header > h1{
+        font-size: 40px;
+        color: #11175E;
+        text-align: left;
+        position:relative;
+        left: -140px;
+        top: -10px;
+    }
+
+    & > #box-2{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 50px;
+        background-color: #ffffff;
+        gap: 15px;
+
+        & > #input-1{
+            width: 43.3%;
+            border-radius: 4px;
+            padding: 0 5px;
+            border: 1px solid #EEEEEE;
+            outline: none;
+            color: #B1BACB;
         }
 
-        & > #box-2{
-            display: flex;
-            justify-content: center;
-            width: 90%;
-            height: 50px;
-            background-color: #ffffff;
-            gap: 15px;
-
-            & > #input-1{
-                width: 43.3%;
-                border-radius: 4px;
-                padding: 0 5px;
-                border: 1px solid #EEEEEE;
-                outline: none;
-                color: #B1BACB;
-    }
-            & > #input-1::placeholder{
-                color: #B1BACB;
-            }
-
-            & > #input-2{
-                width: 43.3%;
-                border-radius: 4px;
-                padding: 0 5px;
-                border: 1px solid #EEEEEE;
-                outline: none;
-                color: #B1BACB;
-    }
-    & > #input-2::placeholder{
-        color: #B1BACB;
-    }
-
-            & > #adicionar{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width:45px;
-                height: 45px;
-                color: white;
-                font-size:25px;
-                cursor: pointer;
-                border-radius: 4px;
-                background: #2D70FD;
-                transition:  200ms;
-}
-
-            & > #adicionar:hover{
-                background: #294890;
-            }
+        & > #input-1::placeholder{
+            color: #B1BACB;
         }
 
-        & > #box-3{
+        & > #input-2{
+            width: 43.3%;
+            border-radius: 4px;
+            padding: 0 5px;
+            border: 1px solid #EEEEEE;
+            outline: none;
+            color: #B1BACB;
+        }
+
+        & > #input-2::placeholder{
+            color: #B1BACB;
+        }
+
+        & > #adicionar{
             display: flex;
-            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            width: 90%;
-            height: 325px;
-            margin-top: 15px;
-            background-color: #ffffff;
-            gap: 5px;
-            overflow-y: auto;
-            z-index: 1;
+            justify-content: center;
+            width:45px;
+            height: 45px;
+            color: white;
+            font-size:25px;
+            cursor: pointer;
+            border-radius: 4px;
+            background: #2D70FD;
+            transition:  200ms;
+        }
 
-            & > .dv-exterior{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 98%;
-                height: 103px;
-                gap: 16px;
-                border-radius: 8px;
-                border: 1px solid #EEEEEE;
-                background: white;
-
-                & > .remover{
-                    display: flex;
-                    justify-content: center;
-                    width: 20px;
-                    height: 20px;
-                    color: transparent;
-                    cursor: pointer;
-                    border-radius: 3px;
-                    background:rgb(255, 0, 98);
-                    transition: 200ms;
-                    font-size: 15px;
-
-}
-
-                    & > .remover:hover{
-                        background: #ff0000;
-                        color: white;
-                        border: none;
-                    }
-
-                & > .dv-interior{
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: space-between;
-                    flex-direction: column;
-                    gap: 20px;
-                    width: 393px;
-                    height: auto;
-                    padding-left: 10px;
-                    background: #ffffff;
-
-                    & > .tarefa{
-                        color: #000000;
-                        width: 100%;
-                        word-wrap: break-word;
-                    }
-
-
-                    & > .dt-et{
-                        display: flex;
-                        align-items: center;
-                        justify-content: start;
-                        flex-direction: row;
-                        width: 100%;
-                        padding-left: 10px;
-                        gap: 10px;
-                        background-color: #ffffff;
-
-                        & > .etiqueta{
-                            display: inline-block;
-                            width: auto;
-                            padding: 5px;
-                            border-radius: 16px;
-                            border: 1px solid #B1BACB;
-                            font-size: 12px;
-                            color: #B1BACB;
-                            background-color: white;
+        & > #adicionar:hover{
+            background: #294890;
+        }
     }
 
-                        & > .data{
-                            font-size: 14px;
-                            color: #B1BACB;
-                    }
+    & > #box-3{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 325px;
+        margin-top: 15px;
+        background-color: #ffffff;
+        gap: 5px;
+        overflow-y: auto;
+        z-index: 1;
+
+        & > .dv-exterior{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 98%;
+            height: 103px;
+            gap: 16px;
+            border-radius: 8px;
+            border: 1px solid #EEEEEE;
+            background: white;
+
+            & > .remover{
+                display: flex;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                color: transparent;
+                cursor: pointer;
+                border-radius: 3px;
+                background: rgb(255, 0, 98);
+                transition: 200ms;
+                font-size: 15px;
+            }
+
+            & > .remover:hover{
+                background: #ff0000;
+                color: white;
+                border: none;
+            }
+
+            & > .dv-interior{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 20px;
+                width: 393px;
+                height: auto;
+                padding-left: 10px;
+                background: #ffffff;
+
+                & > .tarefa{
+                    color: #000000;
+                    width: 100%;
+                    word-wrap: break-word;
                 }
 
+                & > .dt-et{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    flex-direction: row;
+                    width: 100%;
+                    padding-left: 10px;
+                    gap: 10px;
+                    background-color: #ffffff;
+
+                    & > .etiqueta{
+                        display: inline-block;
+                        width: auto;
+                        padding: 5px;
+                        border-radius: 16px;
+                        border: 1px solid #B1BACB;
+                        font-size: 12px;
+                        color: #B1BACB;
+                        background-color: white;
+                    }
+
+                    & > .data{
+                        font-size: 14px;
+                        color: #B1BACB;
+                    }
+                }
             }
 
             & > .concluir{
@@ -181,12 +183,11 @@ body{
                 background:#2D70FD;
                 border-radius: 5px;
                 transition: 300ms;
-}
+            }
 
             & > .concluir:hover{
                 background: #002a8b;
-
-    }
+            }
         }
 
         & > #box-4{
@@ -243,7 +244,7 @@ body{
             width: 90%;
             height: auto;
 
-            & > #input-1,#input-2{
+            & > #input-1, #input-2{
                 width: 100%;
                 height: 50px;
             }
@@ -251,43 +252,42 @@ body{
             & > #adicionar{
                 width: 100%;
             }
-    }
+        }
 
-    & > #box-3{
-        width: 100%;
-        margin-top: 10px;
-
-        & > .dv-exterior{
+        & > #box-3{
             width: 100%;
-            height: 300px;
-            flex-direction: column;
+            margin-top: 10px;
 
-            & > .concluir{
-                margin: 10px 0 0 0;
-            }
-
-            & > .remover{
-                position: relative;
-                left: -80px;
-                top: -45px;
-            }
-
-            & > .dv-interior{
-                align-items: center;
-                justify-content: center;
+            & > .dv-exterior{
                 width: 100%;
-                height: auto;
-                gap: 10px;
+                height: 300px;
+                flex-direction: column;
 
-                & > .dt-et{
-                    width: 100%;
-                    align-items: start;
-                    flex-direction: column;
-                    background-color: rgba(255, 0, 0, 0);
-
+                & > .concluir{
+                    margin: 10px 0 0 0;
                 }
-}
+
+                & > .remover{
+                    position: relative;
+                    left: -80px;
+                    top: -45px;
+                }
+
+                & > .dv-interior{
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: auto;
+                    gap: 10px;
+
+                    & > .dt-et{
+                        width: 100%;
+                        align-items: start;
+                        flex-direction: column;
+                        background-color: rgba(255, 0, 0, 0);
+                    }
+                }
+            }
+        }
     }
-}
-}
 }

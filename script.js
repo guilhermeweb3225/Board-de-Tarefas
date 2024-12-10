@@ -41,7 +41,6 @@ adicionar.addEventListener('click', () => {
     if (input1.value === '' || input2.value === '') {
         alert('Por favor, preencha todos os campos.');
     } else {
-
         let dvExterior = document.createElement('div');
         dvExterior.classList.add('dv-exterior');
 
@@ -61,18 +60,36 @@ adicionar.addEventListener('click', () => {
 
         let data = document.createElement('p');
         data.classList.add('data');
-        data.textContent = 'Criado em:' + Deta.toLocaleDateString('pt-BR');
+        data.textContent = 'Criado em: ' + Deta.toLocaleDateString('pt-BR');
 
         let conclua = document.createElement('button');
         conclua.classList.add('concluir');
         conclua.textContent = 'Concluir';
         conclua.addEventListener('click', () => {
-            paragrafo.style.textDecoration = 'line-through';
-            paragrafo.style.color = "#56ff67";
-            conclua.textContent = 'Concluído';
-            conclua.style.background = "#00ff37";
-            totalTarefasConcluidas++;
-            TConcluidas.innerText = totalTarefasConcluidas.toString();
+            if (!conclua.classList.contains('marcado')) {
+                // Marcar como concluído
+                paragrafo.style.textDecoration = 'line-through';
+                paragrafo.style.color = "#56ff67";
+                conclua.textContent = 'Concluído';
+                conclua.style.background = "#00ff37";
+
+                totalTarefasConcluidas++;
+                TConcluidas.innerText = totalTarefasConcluidas.toString();
+
+                conclua.classList.add('marcado');
+            } else {
+                // Desmarcar como concluído
+                paragrafo.style.textDecoration = 'none';
+                paragrafo.style.color = "initial";
+                conclua.textContent = 'Concluir';
+                conclua.style.background = "";
+
+                totalTarefasConcluidas--;
+                TConcluidas.innerText = totalTarefasConcluidas.toString();
+
+                conclua.classList.remove('marcado');
+            }
+
             localStorage.setItem('totalTarefasConcluidas', totalTarefasConcluidas); // Salvar o total de tarefas concluídas
             salvarAtividades();
         });
@@ -113,16 +130,28 @@ const adicionarEventos = () => {
     document.querySelectorAll('.concluir').forEach((btn) => {
         btn.addEventListener('click', () => {
             const paragrafo = btn.previousElementSibling;
-            paragrafo.style.textDecoration = 'line-through';
-            paragrafo.style.color = "#56ff67";
-            btn.textContent = 'Concluído';
-            btn.style.background = "#00ff37";
-            totalTarefas--;
-            contador.innerText = totalTarefas;
-            totalTarefasConcluidas++;
-            TConcluidas.innerText = totalTarefasConcluidas;
-            localStorage.setItem('totalTarefas', totalTarefas); // Atualizar o total de tarefas
-            localStorage.setItem('totalTarefasConcluidas', totalTarefasConcluidas); // Atualizar o total de tarefas concluídas
+            if (!btn.classList.contains('marcado')) {
+                // Marcar como concluído
+                paragrafo.style.textDecoration = 'line-through';
+                paragrafo.style.color = "#56ff67";
+                btn.textContent = 'Concluído';
+                btn.style.background = "#00ff37";
+
+                totalTarefasConcluidas++;
+                TConcluidas.innerText = totalTarefasConcluidas;
+                btn.classList.add('marcado');
+            } else {
+                // Desmarcar como concluído
+                paragrafo.style.textDecoration = 'none';
+                paragrafo.style.color = "initial";
+                btn.textContent = 'Concluir';
+                btn.style.background = "";
+
+                totalTarefasConcluidas--;
+                TConcluidas.innerText = totalTarefasConcluidas;
+                btn.classList.remove('marcado');
+            }
+            localStorage.setItem('totalTarefasConcluidas', totalTarefasConcluidas);
             salvarAtividades();
         });
     });
@@ -133,9 +162,8 @@ const adicionarEventos = () => {
             box3.removeChild(dvExterior);
             totalTarefas--;
             contador.innerText = totalTarefas;
-            localStorage.setItem('totalTarefas', totalTarefas); // Atualizar o total de tarefas
+            localStorage.setItem('totalTarefas', totalTarefas);
             salvarAtividades();
         });
     });
 };
-//finalizado
