@@ -28,10 +28,7 @@ body{
     header > h1{
         font-size: 40px;
         color: #11175E;
-        text-align: left;
-        position:relative;
-        left: -140px;
-        top: -10px;
+        text-align: center;
     }
 
     & > #box-2{
@@ -291,3 +288,5 @@ body{
         }
     }
 }
+
+/*style do javaScript*/
